@@ -56,25 +56,32 @@ body {
 .hamburger-desplegado {
   display: none;
   position: absolute;
-  top: 35px;
-  left: 0;
-  background-color: #333;
+  top: 40px;
+  background-color: var(--ocaso-oscuro-color);
   padding: 10px;
-}
-.hamburger-desplegado:hover .dropdown {
-  display: block;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  width: 200px;
 }
 .hamburger-desplegado ul {
+  display: block;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hamburger-desplegado li {
+  margin-bottom: 8px;
 }
 .hamburger-desplegado li a {
-  display: block;
   padding: 5px 10px;
-  color: white;
+  color: var(--ocaso-claro-1-color);
   text-decoration: none;
+  font-weight: bold;
 }
 .hamburger-desplegado li a:hover {
-  background-color: #444;
+  background-color: var(--ocaso-medio-color);
+  border-radius: 5px;
 }
 
 .logo-menu {
@@ -113,7 +120,6 @@ body {
 
 .main {
   grid-area: main;
-  padding: 20px;
   background-color: var(--ocaso-medio-color);
 }
 

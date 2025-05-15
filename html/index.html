@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desde el Chip</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="paginaPrincipal.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/paginaPrincipal.css" />
   <script src="https://kit.fontawesome.com/fad9a14bf1.js" crossorigin="anonymous"></script> <!-- Para íconos -->
-  <script src="scripts.js" defer></script> 
+  <script src="../js/scripts.js" defer></script> 
+  <script src="../js/paginaPrincipal.js" defer></script> 
 </head>
 <body>
   <div class="container">
@@ -28,7 +29,7 @@
       </div>
 
       <div class="logo-menu">
-        <a href="#" class="logo">Desde el Chip</a>
+        <a href="../html/index.html" class="logo">Desde el Chip</a>
         <input type="text" placeholder="Buscar productos..." class="buscador">
       </div>
 
@@ -40,6 +41,26 @@
 
     <!-- MAIN -->
     <main class="main">
+
+      <!-- CARRUSEL DE IMÁGENES -->
+      <section class="banner">
+        <div class="banner-imagen">
+          <img src="../imgs/IMG_4104.JPG"Imagen principal" id="imagen-banner">
+        </div>
+      </section>
+      <div class="puntos-banner">
+        <span class="punto" data-img="1"></span>
+        <span class="punto" data-img="2"></span>
+        <span class="punto" data-img="3"></span>
+      </div>
+
+      <!-- SERVICIOS DESTACADOS -->
+      <section class="servicios">
+        <div class="servicio"><i class="fas fa-credit-card"></i><span>Hasta 18 cuotas</span></div>
+        <div class="servicio"><i class="fas fa-truck"></i><span>Envíos a todo el país</span></div>
+        <div class="servicio"><i class="fas fa-percent"></i><span>Ofertas diarias</span></div>
+      </section>
+
       <section class="catalogo">
 
         <!-- MENÚ DE CATEGORÍAS -->
@@ -69,9 +90,11 @@
           <!-- Productos simulados -->
           <!-- Puedes duplicar estas tarjetas para probar la paginación -->
           <div class="producto">
-            <img src="IMG_4104.JPG" alt="Producto">
+            <a href="../html/productoDetalle.html">
+            <img src="../imgs/IMG_4104.JPG" alt="Producto">
             <h3>Mouse Gamer RGB</h3>
             <p>$15.999</p>
+            </a>
           </div>
           <div class="producto">
             <img src="IMG_4104.JPG" alt="Producto">
