@@ -10,6 +10,7 @@
     align-items: center;
 }
 
+
 /* ------IMAGENES------ */
 
 .imagenes {
@@ -94,6 +95,24 @@
 
 .opciones li {
     margin-bottom: 10px;
+}
+
+/* ------RESPONSIVE------ */
+
+@media (max-width: 768px) {
+  .producto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imagenes,
+  .detalle-producto {
+    align-items: center; 
+  }
+
+  .detalle-producto {
+    align-items: start;
+  }
+
 }
 
 /* ------COMENTARIOS------ */
