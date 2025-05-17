@@ -27,9 +27,9 @@ const imagenBanner = document.getElementById("imagen-banner");
 const puntos = document.querySelectorAll(".punto");
 
 const imagenes = [
-  "../imgs/IMG_4104.JPG",
-  "../imgs/IMG_4104.JPG",
-  ""
+  "../imgs/descuentosNotebooks.png",
+  "../imgs/descuentosOtoñales.jpeg",
+  "../imgs/descuentos50.png"
 ];
 
 puntos.forEach((punto, index) => {

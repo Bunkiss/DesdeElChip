@@ -1,0 +1,80 @@
+-------------------- Funcionalidades paginaPrincipal() --------------------
+
+---------- Hamburguer-menu & paginación -----------------------------------
+
+Prioridad: 1
+
+
+---------- Armar carrito --------------------------------------------------
+
+Prioridad: 1
+
+COMO usuario
+QUIERO seleccionar productos
+PARA agregar a un carrito
+
+El usuario
+	Selecciona productos en sus páginas dedicadas.
+
+El sistema
+	IF (usuario = registrado)
+		Agrega el producto a la base de datos del usurario.
+	ELSE
+		Ofrece al usuario: registrarse, loguearse u omitir.
+	SWITCH
+		CASE (omitir)
+		Guarda el producto en una memoria volátil.
+		Emite un msg para verificar el guardado en carrito.
+		CASE (loguearse)
+		Redirige a loguear.html?
+		CASE (registrarse)
+		Redirige a registrar.html?
+
+(prototípicamente solo se podrá seleccionar la opción omitir)
+
+---------- SEARCHBAR ------------------------------------------------------
+
+Prioridad: 2
+
+COMO usuario
+QUIERO buscar productos
+PARA seleccionar
+
+El usuario
+	Ingresa un texto
+
+El sistema
+	Ofrece sugerencias?
+
+---------- Registrar usuario ----------------------------------------------
+
+Prioridad: 2
+
+---------- Iniciar sesión -------------------------------------------------
+
+Prioridad: 2
+
+---------- Armar PC -------------------------------------------------------
+
+Prioridad: 5
+
+COMO usuario
+QUIERO seleccionar productos
+PARA saber si son compatibles
+
+El usuario 
+	Selecciona productos en un menú con las categorías correspondientes a cada componente.
+
+El sistema 
+	Consulta a la base de datos.
+	Compara los atributos correspondientes.
+	Da una respuesta positiva o negativa referida a la compatibilidad.
+
+TAREAS:
+
+Diseñar el menú gráficamente.
+
+Definir método de comparación
+	Ideas base:
+	Provisionalmente; un json con atributos para hacer la comparación con 	cada componente.
+       *Buscar una API que lo resuelva
