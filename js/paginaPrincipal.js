@@ -1,3 +1,10 @@
+/* HAMBURGUER MENU */
+
+import { inicializarMenuHamburguesa } from './scripts.js';
+
+inicializarMenuHamburguesa('.hamburger-buttom', '.hamburger-desplegado');
+
+
 /* SCROLL MENU CATEGORIAS (catálogo) */
 
 const contenedor = document.querySelector('.contenedor-categorias');
@@ -47,3 +54,42 @@ function cambiarImagenAutomatica() {
 
 setInterval(cambiarImagenAutomatica, 3000);
 
+/* API */
+
+async function obtenerDatosApi() {
+    let response = await fetch('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/products/');
+    return await response.json();
+}
+
+/* CARGAR DATOS */
+
+async function cargarDatosHtml() {
+    let data = await obtenerDatosApi();
+    let contenedorGrid = document.querySelector('.productos-grid');
+
+    for (let producto of data) {
+
+        let img = document.createElement('img');
+        img.src = producto.image_urls[0];
+        img.alt = producto.title;
+
+        let titulo = document.createElement('h3');
+        titulo.textContent = producto.title;
+
+
+        let link = document.createElement('a');
+        link.href = '../html/productoDetalle.html';
+
+        // Anidar dentro del <a>
+        link.appendChild(img);
+        link.appendChild(titulo);
+
+        let divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.appendChild(link);
+
+        contenedorGrid.appendChild(divProducto);
+    }
+}
+
+cargarDatosHtml();

@@ -9,7 +9,9 @@
     border-radius: 10px;
     align-items: center;
 }
+
 /* ------IMAGENES------ */
+
 .imagenes {
     display: flex;
     flex-direction: column;
@@ -19,6 +21,7 @@
     background-color: var(--ocaso-claro-1-color);
     border-radius: 10px;
 }
+
 #main-image {
     width: 100%;
     min-width: 200px;
@@ -28,6 +31,7 @@
     margin-bottom: 10px;
     display: block;
 }
+
 .miniaturas {
     display: flex;
     width: 100%;
@@ -47,6 +51,7 @@
 }
 
 /* ------DETALLE------ */
+
 .detalle-producto {
     display: flex;
     flex-direction: column;
@@ -58,6 +63,12 @@
     border-radius: 10px;
     color: var(--oscuro-text-color);
 } 
+
+.titulo {
+    font-weight: 800;
+    font-size: x-large;
+}
+
 .calificacion {
     color: rgba(224, 228, 10, 0.897);
     font-weight: bold;
@@ -67,6 +78,7 @@
         -0.75px  0.75px 0 black,
         0.75px  0.75px 0 black;
 }
+
 .precio {
     font-size: 1.5em;
     color: #47b360;
@@ -79,11 +91,13 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.caracteristicas li {
+
+.opciones li {
     margin-bottom: 10px;
 }
 
 /* ------COMENTARIOS------ */
+
 .comentarios {
     grid-area: comentarios;
     padding: 2rem;
@@ -92,6 +106,7 @@
     align-items: center;
     background-color: var(--ocaso-medio-color);
 }
+
 .comentario-box {
     margin-top: 30px;
     width: 100%;
@@ -101,6 +116,7 @@
     padding: 10px;
     background: var(--ocaso-claro-color);
 }
+
 .comentario-form {
     border: 1px solid var(--ocaso-oscuro-color);
     border-radius: 10px;
@@ -113,6 +129,7 @@
     padding: 10px;
     background-color: var(--ocaso-claro-color);
 }
+
 textarea {
     width: 100%;
     height: 150px;
@@ -121,11 +138,13 @@ textarea {
     font-size: 1rem;
     border-radius: 10px;
 }
+
 #select-calificacion, #input-name {
     height: 25px;
     font-size: 1rem;
     border-radius: 10px;
 }
+
 #input-enviar {
     height: 30px;
     width: 80px;
