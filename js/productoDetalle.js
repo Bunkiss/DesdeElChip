@@ -12,10 +12,11 @@ async function obtenerDatosApi() {
     return await response.json();
 }
 
+const data = await obtenerDatosApi();
+
 /* CARGAR DATOS */
 
-async function cargarDatosHtml() {
-    let data = await obtenerDatosApi();
+async function cargarDatosHtml(data) {
     
     establecerElementosLista('lista-tipos', data.notebooksTypes);
     establecerTexto('titulo', data.title);
@@ -31,7 +32,7 @@ async function cargarDatosHtml() {
     }
 }
 
-cargarDatosHtml();
+cargarDatosHtml(data);
 
 /* IMAGENEN DE PRODUCTO Y MINIATURAS DINÁMICAS */
 
@@ -47,3 +48,40 @@ thumbnails.forEach(thumb => {
         this.classList.add('activa');
     });
 });
+
+/* Ejercicio localstorage */
+
+document.getElementById("favorito").addEventListener("click", function () {
+
+    const arrayFavoritos = localStorage.getItem("favoritos")
+
+    if (arrayFavoritos != null) {
+        let array = JSON.parse(localStorage.getItem("favoritos"));
+
+        if (!array.includes(data.title)) {
+            array.push(data.title);
+            localStorage.setItem("favoritos", JSON.stringify(array));
+        } else {
+            alert("Este producto ya está en favoritos.");
+        }
+    } else {
+        let array = [data.title];
+        localStorage.setItem("favoritos", JSON.stringify(array));
+    }
+
+    mostrarFavoritos();
+})
+
+function mostrarFavoritos() {
+    const arrayFavoritos = localStorage.getItem("favoritos");
+
+    if (arrayFavoritos !== null) {
+        const array = JSON.parse(arrayFavoritos);
+        const texto = array.join(", "); // Une los titulos separados por coma
+        document.getElementById("favoritos-actuales").textContent = `Favoritos: ${texto}`;
+    } else {
+        document.getElementById("favoritos-actuales").textContent = "No hay productos favoritos.";
+    }
+}
+
+mostrarFavoritos()
